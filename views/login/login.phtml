@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title><?php echo $this->titulo; ?></title>
+        <meta http-equiv="Content-Type" content="text/html" charset="utf8">
+        <link href="<?php echo $_layoutParams['ruta_css']; ?>bootstrap-theme.css" rel="stylesheet" type="text/css">
+        <link href="<?php echo $_layoutParams['ruta_css']; ?>bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+        <link href="<?php echo $_layoutParams['ruta_css']; ?>bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="<?php echo $_layoutParams['ruta_css']; ?>bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="<?php echo $_layoutParams['ruta_css']; ?>style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+         <header class="header">
+
+		<nav class="navbar navbar-custom" role="navigation">
+
+			<div class="container">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"></a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="custom-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#services">Servicios</a></li>
+                                                <li><a href="#portfolio">Trabajos</a></li>
+                                                <!--<li><a href="#skills">Habilidades</a></li>-->
+						<!--<li><a href="#testimonials">Testimonios</a></li>-->
+						<li><a href="#contact">Contacto</a></li>
+					</ul>
+				</div>
+
+			</div><!-- .container -->
+
+		</nav>
+
+	</header>
+        <div class="container">
+            <div class="page-header">
+                <h3>Bienvenidos</h3>
+            </div>
+            <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="text-center">EI-BOOK</h3>
+                        <small><h5 class="text-center">Crea tu libro a tu manera</h5></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                
+                <div class="row">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <p>Login de Usuario</p>
+                        </div>
+                        <div class="panel-body">
+                            <form action="<?php echo BASE_URL . 'login/ingresar' ?>">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label>Usuario</label>
+                                    <input type="text" id="txtLogin" class="form-control">    
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label>Contraseña</label>
+                                    <input type="password" id="txtContraseña" class="form-control">   
+                                </div>
+                            </div>
+                           
+                            <div class="col-md-8">      
+                                <input type="submit" id="botonEnviar" class="btn btn-primary" value="Ingresar">
+                            </div>
+                            </form>
+                        </div>
+                        <div class="panel-footer">
+                            <p><?php echo Session::get('sess_mensaje'); ?></p>
+                            <p>Si no tiene cuenta, reg&iacute;strese <a href="<?php echo BASE_URL ?>registro" >Aqui</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="navbar-bottom navbar-fixed-bottom">
+            <p class="text-center">Fresno, Derechos reservados</h3>  
+        </div>
+        
+    </body>
+    <script type="text/javascript" src="<?php echo $_layoutParams['ruta_js']; ?>jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="<?php echo $_layoutParams['ruta_js']; ?>bootstrap.js"></script>
+    <script type="text/javascript" src="<?php echo $_layoutParams['ruta_js']; ?>bootstrap.min.js"></script>
+
+</html>

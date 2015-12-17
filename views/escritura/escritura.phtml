@@ -1,0 +1,36 @@
+<div class="container">
+            <div class="page-header">
+                <h3></h3>
+            </div>
+     <script src='//cdn.tinymce.com/4/tinymce.min.js'></script>
+       <script>
+  tinymce.init({
+  selector: '#escritura',
+   menu: {
+  },
+  height: 500,
+  plugins: [
+    'advlist autolink lists link image charmap print preview anchor',
+    'searchreplace visualblocks code fullscreen',
+   
+  ],
+  toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
+  content_css: [
+    '//fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',
+    '//www.tinymce.com/css/codepen.min.css'
+  ]
+});
+  </script>
+  <div class ="row">
+   <div class ="col-md-9">
+  <form method="post">
+    <textarea id="escritura">Escribe tu capítulo...</textarea>
+  </form>
+</div>
+     
+      <div class ="col-md-2">
+          Acá debe ir el arbol de herramientas
+     
+      </div>
+  </div>
+</div>
